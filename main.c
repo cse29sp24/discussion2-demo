@@ -1,10 +1,12 @@
+/* Discussion 2 Demo - Memory Errors */
+
 #include <stdio.h>
 
 #define LEN 4 
 
-void add(int arr[])
+void add(int arr[], int length)
 {
-    for (int i = 0; i <= LEN; i++) {
+    for (int i = 0; i <= length; i++) {
         arr[i]++;
     }
 }
@@ -13,7 +15,7 @@ int main()
 {
     int arr[LEN] = {1, 2, 3, 4};
     int arr2[LEN] = {10, 20, 30, 40};
-    add(arr);
+    add(arr2, LEN);
     for (int i = 0; i < LEN; i++) {
         printf("arr[%d] = %d\n", i, arr[i]);
     }
