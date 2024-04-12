@@ -4,7 +4,10 @@
 
 #define LEN 4 
 
-void add(int arr[], int length)
+/**
+ * Increment all the numbers in an array by 1.
+ */
+void increment(int arr[], int length)
 {
     for (int i = 0; i <= length; i++) {
         arr[i]++;
@@ -15,7 +18,10 @@ int main()
 {
     int arr[LEN] = {1, 2, 3, 4};
     int arr2[LEN] = {10, 20, 30, 40};
-    add(arr2, LEN);
+
+    increment(arr, LEN);
+    increment(arr2, LEN);
+
     for (int i = 0; i < LEN; i++) {
         printf("arr[%d] = %d\n", i, arr[i]);
     }
